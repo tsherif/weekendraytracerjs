@@ -3,7 +3,7 @@ Weekend Ray Tracer JS
 
 This is a JavaScript port of the path tracing algorithm described in Peter Shirley's [Ray Tracing in One Weekend](https://www.amazon.com/Ray-Tracing-Weekend-Minibooks-Book-ebook/dp/B01B5AODD8/).
 
-The live demo can be viewed [here]().
+The live demo can be viewed [here](https://github.com/tsherif/weekendraytracer).
 
 Some key changes were made from the original algorithm to make it easier to run in a web page:
 - The image is rendered to a canvas, rather than creating a ppm file.
@@ -11,4 +11,4 @@ Some key changes were made from the original algorithm to make it easier to run 
 - [glMatrix](http://glmatrix.net/) is used for vector calculations to avoid garbage collection.
 - Other minor reorganization to account for differences between C++ and JavaScript.
 
-Other than those differences, the algorithm *should* be functionally identical to the original. If you find any errors, please bring them to my attention!
+Other than those differences, the algorithm *should* be functionally identical to the original. If you find any errors, please let me know!
