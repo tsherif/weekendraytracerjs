@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+  The MIT License (MIT)
+
+  Copyright (c) 2016 Tarek Sherif
+  Based on the original algorithm by Peter Shirley
+  (http://in1weekend.blogspot.ca/2016/01/ray-tracing-in-one-weekend.html)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of
+  this software and associated documentation files (the "Software"), to deal in
+  the Software without restriction, including without limitation the rights to
+  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  the Software, and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        #description {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 300px;
+        }
+
+        #info {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id=description>
+        <p>
+            This is a JavaScript port of the path tracer
+            from Peter Shirley's (wonderful!)
+            <a target="_blank" href="https://www.amazon.com/Ray-Tracing-Weekend-Minibooks-Book-ebook/dp/B01B5AODD8/">
+                Ray Tracing in One Weekend</a>.
+        </p>
+        <p>
+            By default, it renders to an image scaled down to <b>0.25</b> times the window size.
+            You can adjust this by adding a parameter <b><code>?scale=&lt;factor&gt;</code></b> to the URL.
+        </p>
+        <p>
+            Code is available here.
+        </p>
+    </div>
+    <div id="info">
+        <div>
+            Rendering pass: <span id="pass">1</span>
+        </div>
+        <div>
+            Last pass render time: <span id="time">0</span>
+        </div>
+        <div>
+            Canvas resolution <span id="canvas-resolution"></span>
+        </div>
+        <div>
+            Window resolution <span id="window-resolution"></span>
+        </div>
+    </div>
+    <script src="js/gl-matrix-min.js"></script>
+    <script src="js/ray.js"></script>
+    <script src="js/sphere.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/materials.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
