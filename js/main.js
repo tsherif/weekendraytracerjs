@@ -260,6 +260,16 @@
 
             aspect = windowWidth / windowHeight;
 
+            cam = new Camera(
+                vec3.fromValues(14, 2, 6),
+                vec3.fromValues(0, 0, 0),
+                vec3.fromValues(0, 1, 0),
+                Math.PI / 9,
+                aspect,
+                12,
+                0.1
+            );
+
             canvasWidth = Math.floor(windowWidth * scale);
             canvasHeight = Math.floor(windowHeight * scale);
 
